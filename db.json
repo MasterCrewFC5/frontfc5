@@ -1,0 +1,30 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "username": "NegOOor",
+            "teamname": "Olympique claqué",
+            "friends":[
+                {
+                    "id":1,
+                    "username": "Creemson",
+                    "teamname": "Arsemâle FC"
+                }
+            ],
+            "money": [
+                {
+                    "id": 1,
+                    "dollars": 140000,
+                    "revenus": 32750,
+                    "fc5": 530
+                }
+            ],
+            "img":[
+                {
+                    "id":1,
+                    "src": "assets/userlogo.png"
+                }
+            ]
+        }
+    ]
+}

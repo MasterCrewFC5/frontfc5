@@ -1,0 +1,74 @@
+<svg width="132" height="152" viewBox="0 0 132 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Manage team icon</title>
+    <g id="Canvas" transform="translate(63 202)">
+        <g id="Manage team icon" filter="url(#filter0_dd)">
+            <g id="Rectangle">
+                <use xlink:href="#path0_fill" transform="translate(-53 -188)" fill="#757171"/>
+            </g>
+            <g id="Rectangle">
+                <use xlink:href="#path1_fill" transform="translate(-43 -180)" fill="#F7F2F2"/>
+            </g>
+            <g id="Rectangle 2">
+                <use xlink:href="#path2_fill" transform="translate(-23 -186)" fill="#2F80ED"/>
+            </g>
+            <g id="Rectangle 3">
+                <use xlink:href="#path3_fill" transform="translate(-7 -192)" fill="#2E2D2D"/>
+            </g>
+            <g id="Group">
+                <g id="Vector">
+                    <use xlink:href="#path4_fill" transform="translate(-33.7617 -162)" fill="#595555"/>
+                </g>
+                <g id="Vector">
+                    <use xlink:href="#path4_fill" transform="translate(-33.7617 -95.8666)" fill="#595555"/>
+                </g>
+                <g id="Vector">
+                    <use xlink:href="#path5_fill" transform="translate(-33.7617 -149.2)" fill="#595555"/>
+                </g>
+                <g id="Vector">
+                    <use xlink:href="#path5_fill" transform="translate(-33.7617 -123.6)" fill="#595555"/>
+                </g>
+                <g id="Vector">
+                    <use xlink:href="#path5_fill" transform="translate(-33.7617 -108.667)" fill="#595555"/>
+                </g>
+                <g id="Vector">
+                    <use xlink:href="#path6_fill" transform="translate(-33.7617 -136.4)" fill="#595555"/>
+                </g>
+                <g id="Vector">
+                    <use xlink:href="#path7_fill" transform="translate(18.154 -136.4)" fill="#595555"/>
+                </g>
+                <g id="Vector">
+                    <use xlink:href="#path8_fill" transform="translate(8.71484 -136.381)" fill="#595555"/>
+                </g>
+                <g id="Vector">
+                    <use xlink:href="#path9_fill" transform="translate(-55 -194)" fill="#595555"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_dd" filterUnits="userSpaceOnUse" x="-63" y="-202" width="132" height="152" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+            <feOffset dx="0" dy="8"/>
+            <feGaussianBlur stdDeviation="4"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+            <feOffset dx="0" dy="0"/>
+            <feGaussianBlur stdDeviation="4"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+            <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+        </filter>
+        <path id="path0_fill" d="M 0 0L 112 0L 112 118L 0 118L 0 0Z"/>
+        <path id="path1_fill" d="M 0 0L 92 0L 92 104L 0 104L 0 0Z"/>
+        <path id="path2_fill" d="M 0 0L 52 0L 52 10L 0 10L 0 0Z"/>
+        <path id="path3_fill" d="M 0 0L 20 0L 20 10L 0 10L 0 0Z"/>
+        <path id="path4_fill" d="M 2.35981 4.26667L 33.0373 4.26667C 34.3423 4.26667 35.3971 3.31307 35.3971 2.13333C 35.3971 0.9536 34.3423 0 33.0373 0L 2.35981 0C 1.05483 0 0 0.9536 0 2.13333C 0 3.31307 1.05483 4.26667 2.35981 4.26667Z"/>
+        <path id="path5_fill" d="M 2.35981 4.26667L 70.7942 4.26667C 72.0992 4.26667 73.154 3.31307 73.154 2.13333C 73.154 0.9536 72.0992 0 70.7942 0L 2.35981 0C 1.05483 0 0 0.9536 0 2.13333C 0 3.31307 1.05483 4.26667 2.35981 4.26667Z"/>
+        <path id="path6_fill" d="M 2.35981 4.26667L 35.3971 4.26667C 36.7021 4.26667 37.7569 3.31307 37.7569 2.13333C 37.7569 0.9536 36.7021 0 35.3971 0L 2.35981 0C 1.05483 0 0 0.9536 0 2.13333C 0 3.31307 1.05483 4.26667 2.35981 4.26667Z"/>
+        <path id="path7_fill" d="M 18.8785 0L 2.35981 0C 1.05483 0 0 0.9536 0 2.13333C 0 3.31307 1.05483 4.26667 2.35981 4.26667L 18.8785 4.26667C 20.1834 4.26667 21.2383 3.31307 21.2383 2.13333C 21.2383 0.9536 20.1834 0 18.8785 0Z"/>
+        <path id="path8_fill" d="M 0.684346 0.600029C 0.235983 1.00323 0 1.53656 0 2.11469C 0 2.66936 0.257221 3.22403 0.684346 3.62936C 1.13035 4.03256 1.7203 4.24803 2.35981 4.24803C 2.99696 4.24803 3.58691 4.01336 4.03527 3.62936C 4.46003 3.22403 4.71962 2.69069 4.71962 2.11469C 4.71962 1.53656 4.48127 1.00323 4.03527 0.600029C 3.13854 -0.189305 1.58107 -0.210638 0.684346 0.600029Z"/>
+        <path id="path9_fill" d="M 84.9531 4.26667L 70.7942 4.26667L 70.7942 2.13333C 70.7942 0.9536 69.7394 0 68.4344 0L 47.1962 0C 45.8912 0 44.8363 0.9536 44.8363 2.13333L 44.8363 4.26667L 30.6775 4.26667L 0 4.26667L 0 128L 115.631 128L 115.631 4.26667L 84.9531 4.26667ZM 66.0746 4.26667L 66.0746 6.4L 66.0746 10.6667L 49.556 10.6667L 49.556 6.4L 49.556 4.26667L 66.0746 4.26667ZM 44.8363 8.53333L 44.8363 12.8L 44.8363 14.9333L 47.1962 14.9333L 68.4344 14.9333L 70.7942 14.9333L 70.7942 12.8L 70.7942 8.53333L 82.5933 8.53333L 82.5933 10.6667L 82.5933 17.0667L 33.0373 17.0667L 33.0373 10.6667L 33.0373 8.53333L 44.8363 8.53333ZM 28.3177 19.2L 28.3177 21.3333L 30.6775 21.3333L 84.9531 21.3333L 87.3129 21.3333L 87.3129 19.2L 87.3129 14.9333L 103.832 14.9333L 103.832 117.333L 11.799 117.333L 11.799 14.9333L 28.3177 14.9333L 28.3177 19.2ZM 110.911 123.733L 4.71962 123.733L 4.71962 8.53333L 28.3177 8.53333L 28.3177 10.6667L 7.07942 10.6667L 7.07942 121.6L 108.551 121.6L 108.551 10.6667L 87.3129 10.6667L 87.3129 8.53333L 110.911 8.53333L 110.911 123.733Z"/>
+    </defs>
+</svg>
