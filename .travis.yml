@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '7'
+before_install:
+- npm install jscodesniffer
+cache:
+  directories:
+  - node_modules
+script:
+- node node_modules/jscodesniffer/jscs.js app.js --standard=Jquery --report-full
+- npm run dev &
+notifications:
+  email:
+    on_failure: always
+    on_success: never
+deploy:
+  provider: heroku
+  app: gitworkflowesgi
+  api_key:
+    secure: 9ef3e6d2-0d6a-4e01-8d5f-bc64204d3f52
