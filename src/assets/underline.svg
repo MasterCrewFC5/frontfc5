@@ -1,0 +1,11 @@
+<svg width="30" height="1" viewBox="0 0 30 1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Line 2</title>
+    <g id="Canvas" transform="translate(-111 -118)">
+        <g id="Line 2">
+            <use xlink:href="#path0_stroke" transform="translate(111 119)" fill="#828282"/>
+        </g>
+    </g>
+    <defs>
+        <path id="path0_stroke" d="M 0 0L 30 0L 30 -0.2L 0 -0.2L 0 0Z"/>
+    </defs>
+</svg>

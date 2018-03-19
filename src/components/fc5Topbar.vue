@@ -2,7 +2,6 @@
     <div id="nav" class="nav">
         <div v-if="user" class="topbar">
 
-
             <div class="leftpart">
                 <div class="userlogo">
                     <img src="../assets/topbar/userlogo.png" alt="profilimage" >
@@ -46,10 +45,10 @@
             }
         },
         methods: {
-            getUser(){
+            /*getUser(){
                 axios.get('http://localhost:3001/user')
                     .then(res => this.user = res.data)
-            }
+            }*/
         },
         async created(){
             //this.getUser()
@@ -69,6 +68,7 @@
 
     .topbar {
         position: absolute;
+        z-index: 10;
         left: 0%;
         right: 0%;
         top: 0%;
