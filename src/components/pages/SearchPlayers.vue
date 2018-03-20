@@ -4,6 +4,7 @@
 
         <div class="content">
             <div class="pub"><img src="./../../assets/pub.svg" alt=""> </div>
+
             <div class="search">
                 <input type="text" class="search-input" placeholder="Search ..." v-model="form.searchValue">
                 <img class="find" src="./../../assets/searchButton.svg" alt="search" @click="searchPlayers()" @keyup.enter.native="searchPlayers()">
@@ -19,7 +20,7 @@
                 <div class="filters" v-if="filterIsActive">
 
                     <div class="position">
-                        Position  <v-select  class="searchinput" v-model="selected" :options="['GK','LF','LW','RW','ST','CAM','CB','CM']" />
+                        Position  <v-select  class="searchinput" v-model="selected" :options="['G','LF','LW','RW','ST','CAM','CB','CM']" />
                     </div>
 
                     <div class="age">
@@ -97,7 +98,7 @@
                         <div class="rightpart">
                             <div class="values">
                                 <span class="overall thin"> {{ player.rating }} </span>
-                                <span class="position bold red"> {{ player.position }} </span>
+                                  <fc5playerposition :position="player.position"></fc5playerposition>
                             </div>
                         </div>
                     </div>
@@ -109,22 +110,6 @@
         </div>
 
         <fc5modalplayer v-if="showModal" @close="showModal = false" :player="playerShownInModal">
-            <!--
-              you can use custom content here to overwrite
-              default content
-            -->
-            <div slot="commonName"> {{ playerShownInModal.commonName || playerShownInModal.firstName +' '+ playerShownInModal.lastName }}</div>
-            <div slot="club"> {{playerShownInModal.club.name}}</div>
-            <div slot="age"> {{playerShownInModal.age}}</div>
-            <div slot="height"> {{playerShownInModal.height}}</div>
-            <div slot="weight"> {{playerShownInModal.weight}}</div>
-            <div slot="ovr"> {{playerShownInModal.rating}}</div>
-
-            <div slot="svgGraph">
-                <svg width="200" height="200">
-                    <fc5svggraph :stats="stats"></fc5svggraph>
-                </svg>
-            </div>
         </fc5modalplayer>
     </div>
 </template>
@@ -134,6 +119,7 @@
     import store from './../FootballStore'
 
     import fc5modalplayer from './../fc5ModalPlayer'
+    import fc5playerposition from './../fc5PlayerPosition'
     import fc5svggraph from './../fc5SvgGraph'
     import vSelect from 'vue-select'
     import fc5topbar from './../fc5Topbar.vue'
@@ -141,7 +127,7 @@
     export default {
         store: store,
         name: 'app',
-        components: {fc5topbar, vSelect, fc5modalplayer, fc5svggraph},
+        components: {fc5topbar, vSelect, fc5modalplayer, fc5svggraph, fc5playerposition},
         data() {
             return {
                 selected: '',
@@ -406,160 +392,156 @@
                     },
                     {
                         "commonName": "",
-                        "firstName": "Sergio",
-                        "headshotImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/134x134/153079.png",
-                        "lastName": "Agüero",
+                        "firstName": "Manuel",
+                        "headshotImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/134x134/167495.png",
+                        "lastName": "Neuer",
                         "league": {
-                            "abbrName": "ENG 1",
-                            "id": 13,
+                            "abbrName": "ALL 1",
+                            "id": 19,
                             "imgUrl": null,
-                            "name": "Premier League"
+                            "name": "Bundesliga"
                         },
                         "nation": {
                             "imageUrls": {
-                                "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/24x14/52.png",
-                                "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/30x19/52.png",
-                                "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/40x25/52.png"
+                                "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/24x14/21.png",
+                                "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/30x19/21.png",
+                                "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/40x25/21.png"
                             },
-                            "abbrName": "Argentina",
-                            "id": 52,
+                            "abbrName": "Allemagne",
+                            "id": 21,
                             "imgUrl": null,
-                            "name": "Argentina"
+                            "name": "Allemagne"
                         },
                         "club": {
                             "imageUrls": {
                                 "dark": {
-                                    "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/24x24/l10.png",
-                                    "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/27x27/l10.png",
-                                    "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/34x34/l10.png"
+                                    "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/24x24/l21.png",
+                                    "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/27x27/l21.png",
+                                    "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/34x34/l21.png"
                                 },
                                 "normal": {
-                                    "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/24x24/l10.png",
-                                    "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/27x27/l10.png",
-                                    "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/34x34/l10.png"
+                                    "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/24x24/l21.png",
+                                    "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/27x27/l21.png",
+                                    "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/34x34/l21.png"
                                 }
                             },
-                            "abbrName": "Man City",
-                            "id": 10,
+                            "abbrName": "FC Bayern",
+                            "id": 21,
                             "imgUrl": null,
-                            "name": "Manchester City"
+                            "name": "FC Bayern Munich"
                         },
                         "headshot": {
-                            "largeImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/134x134/153079.png",
-                            "medImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/105x105/153079.png",
-                            "smallImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/40x40/153079.png"
+                            "largeImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/134x134/167495.png",
+                            "medImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/105x105/167495.png",
+                            "smallImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/40x40/167495.png"
                         },
                         "specialImages": {
                             "largeTOTWImgUrl": null,
                             "medTOTWImgUrl": null
                         },
-                        "position": "ST",
-                        "composure": 90,
-                        "playStyle": "Basic",
+                        "position": "G",
+                        "composure": 70,
+                        "playStyle": "Base",
                         "playStyleId": null,
-                        "height": 173,
-                        "weight": 70,
-                        "birthdate": "1988-06-02",
-                        "age": 29,
-                        "acceleration": 90,
-                        "aggression": 63,
-                        "agility": 86,
-                        "balance": 91,
-                        "ballcontrol": 89,
-                        "foot": "Right",
-                        "skillMoves": 4,
-                        "crossing": 70,
-                        "curve": 82,
-                        "dribbling": 89,
-                        "finishing": 90,
-                        "freekickaccuracy": 72,
-                        "gkdiving": 13,
-                        "gkhandling": 15,
-                        "gkkicking": 6,
-                        "gkpositioning": 11,
-                        "gkreflexes": 14,
-                        "headingaccuracy": 68,
-                        "interceptions": 24,
-                        "jumping": 80,
-                        "longpassing": 63,
-                        "longshots": 83,
-                        "marking": 13,
-                        "penalties": 83,
-                        "positioning": 91,
-                        "potential": 89,
-                        "reactions": 89,
-                        "shortpassing": 79,
-                        "shotpower": 88,
-                        "slidingtackle": 12,
-                        "sprintspeed": 84,
-                        "standingtackle": 20,
-                        "stamina": 74,
-                        "strength": 74,
-                        "vision": 83,
-                        "volleys": 85,
+                        "height": 193,
+                        "weight": 92,
+                        "birthdate": "1986-03-27",
+                        "age": 31,
+                        "acceleration": 58,
+                        "aggression": 29,
+                        "agility": 52,
+                        "balance": 35,
+                        "ballcontrol": 48,
+                        "foot": "Droit",
+                        "skillMoves": 1,
+                        "crossing": 15,
+                        "curve": 14,
+                        "dribbling": 30,
+                        "finishing": 13,
+                        "freekickaccuracy": 11,
+                        "gkdiving": 91,
+                        "gkhandling": 90,
+                        "gkkicking": 95,
+                        "gkpositioning": 91,
+                        "gkreflexes": 89,
+                        "headingaccuracy": 25,
+                        "interceptions": 30,
+                        "jumping": 78,
+                        "longpassing": 59,
+                        "longshots": 16,
+                        "marking": 10,
+                        "penalties": 47,
+                        "positioning": 12,
+                        "potential": 92,
+                        "reactions": 85,
+                        "shortpassing": 55,
+                        "shotpower": 25,
+                        "slidingtackle": 11,
+                        "sprintspeed": 61,
+                        "standingtackle": 10,
+                        "stamina": 44,
+                        "strength": 83,
+                        "vision": 70,
+                        "volleys": 11,
                         "weakFoot": 4,
                         "traits": [
-                            "Tries To Beat Defensive Line",
-                            "Flair",
-                            "Technical Dribbler"
+                            "Longue relance",
+                            "Gardien - Duel",
+                            "Gardien libéro"
                         ],
-                        "specialities": [
-                            "Dribbler",
-                            "Acrobat",
-                            "Clinical Finisher"
-                        ],
-                        "atkWorkRate": "High",
-                        "defWorkRate": "Medium",
-                        "playerType": "rare",
+                        "specialities": null,
+                        "atkWorkRate": "Moyen",
+                        "defWorkRate": "Moyen",
+                        "playerType": "Rare",
                         "attributes": [
                             {
-                                "name": "fut.attribute.PAC",
-                                "value": 87,
+                                "name": "fut.attribute.DIV",
+                                "value": 91,
                                 "chemistryBonus": [
                                     0
                                 ]
                             },
                             {
-                                "name": "fut.attribute.SHO",
-                                "value": 88,
+                                "name": "fut.attribute.HAN",
+                                "value": 90,
                                 "chemistryBonus": [
                                     0
                                 ]
                             },
                             {
-                                "name": "fut.attribute.PAS",
-                                "value": 75,
+                                "name": "fut.attribute.KIC",
+                                "value": 95,
                                 "chemistryBonus": [
                                     0
                                 ]
                             },
                             {
-                                "name": "fut.attribute.DRI",
+                                "name": "fut.attribute.REF",
                                 "value": 89,
                                 "chemistryBonus": [
                                     0
                                 ]
                             },
                             {
-                                "name": "fut.attribute.DEF",
-                                "value": 23,
+                                "name": "fut.attribute.SPD",
+                                "value": 58,
                                 "chemistryBonus": [
                                     0
                                 ]
                             },
                             {
-                                "name": "fut.attribute.PHY",
-                                "value": 72,
+                                "name": "fut.attribute.POS",
+                                "value": 91,
                                 "chemistryBonus": [
                                     0
                                 ]
                             }
                         ],
-                        "name": "Agüero",
+                        "name": "Neuer",
                         "quality": "gold",
                         "color": "rare_gold",
-                        "isGK": false,
-                        "positionFull": "Striker",
+                        "isGK": true,
+                        "positionFull": "Gardien",
                         "isSpecialType": false,
                         "contracts": null,
                         "fitness": null,
@@ -569,10 +551,10 @@
                         "iconAttributes": null,
                         "itemType": "player",
                         "discardValue": null,
-                        "id": "153079",
+                        "id": "167495",
                         "modelName": "FUTPlayerItem",
-                        "baseId": 153079,
-                        "rating": 89
+                        "baseId": 167495,
+                        "rating": 92
                     },
                     {
                         "commonName": "",
@@ -826,12 +808,6 @@
                 "baseId": 183277,
                 "rating": 90
             }
-                // stats : [
-                //     { label: 'ATQ', value: 83 },
-                //     { label: 'DEF', value: 41 },
-                //     { label: 'SPE', value: 93 },
-                //     { label: 'GK ', value: 100 },
-                // ]
             }
         },
         methods:{
@@ -855,22 +831,6 @@
                 });
                 this.playerShownInModal = dataReceived.data[0]
                 this.showModal = true;
-            }
-        },
-        computed: {
-            stats: function () {
-                return  [
-                    { label: 'ATQ', value: this.playerShownInModal.dribbling },
-                    { label: 'DEF', value: this.playerShownInModal.interceptions },
-                    { label: 'SPE', value: this.playerShownInModal.longpassing },
-                    { label: 'GK ', value: this.playerShownInModal.gkdiving },
-                ]
-
-                // let total = this.stats.length
-                // return this.stats.map(function (stat, i) {
-                //     let point = valueToPoint(stat.value, i, total)
-                //     return point.x + ',' + point.y
-                // }).join(' ')
             }
         },
         async created(){

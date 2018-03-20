@@ -4147,6 +4147,172 @@
             "modelName": "FUTPlayerItem",
             "baseId": 164240,
             "rating": 88
+        },
+        {
+            "commonName": "",
+            "firstName": "Manuel",
+            "headshotImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/134x134/167495.png",
+            "lastName": "Neuer",
+            "league": {
+                "abbrName": "ALL 1",
+                "id": 19,
+                "imgUrl": null,
+                "name": "Bundesliga"
+            },
+            "nation": {
+                "imageUrls": {
+                    "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/24x14/21.png",
+                    "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/30x19/21.png",
+                    "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/40x25/21.png"
+                },
+                "abbrName": "Allemagne",
+                "id": 21,
+                "imgUrl": null,
+                "name": "Allemagne"
+            },
+            "club": {
+                "imageUrls": {
+                    "dark": {
+                        "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/24x24/l21.png",
+                        "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/27x27/l21.png",
+                        "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/dark/34x34/l21.png"
+                    },
+                    "normal": {
+                        "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/24x24/l21.png",
+                        "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/27x27/l21.png",
+                        "large": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/clubbadges/html5/normal/34x34/l21.png"
+                    }
+                },
+                "abbrName": "FC Bayern",
+                "id": 21,
+                "imgUrl": null,
+                "name": "FC Bayern Munich"
+            },
+            "headshot": {
+                "largeImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/134x134/167495.png",
+                "medImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/105x105/167495.png",
+                "smallImgUrl": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/players/html5/40x40/167495.png"
+            },
+            "specialImages": {
+                "largeTOTWImgUrl": null,
+                "medTOTWImgUrl": null
+            },
+            "position": "G",
+            "composure": 70,
+            "playStyle": "Base",
+            "playStyleId": null,
+            "height": 193,
+            "weight": 92,
+            "birthdate": "1986-03-27",
+            "age": 31,
+            "acceleration": 58,
+            "aggression": 29,
+            "agility": 52,
+            "balance": 35,
+            "ballcontrol": 48,
+            "foot": "Droit",
+            "skillMoves": 1,
+            "crossing": 15,
+            "curve": 14,
+            "dribbling": 30,
+            "finishing": 13,
+            "freekickaccuracy": 11,
+            "gkdiving": 91,
+            "gkhandling": 90,
+            "gkkicking": 95,
+            "gkpositioning": 91,
+            "gkreflexes": 89,
+            "headingaccuracy": 25,
+            "interceptions": 30,
+            "jumping": 78,
+            "longpassing": 59,
+            "longshots": 16,
+            "marking": 10,
+            "penalties": 47,
+            "positioning": 12,
+            "potential": 92,
+            "reactions": 85,
+            "shortpassing": 55,
+            "shotpower": 25,
+            "slidingtackle": 11,
+            "sprintspeed": 61,
+            "standingtackle": 10,
+            "stamina": 44,
+            "strength": 83,
+            "vision": 70,
+            "volleys": 11,
+            "weakFoot": 4,
+            "traits": [
+                "Longue relance",
+                "Gardien - Duel",
+                "Gardien libéro"
+            ],
+            "specialities": null,
+            "atkWorkRate": "Moyen",
+            "defWorkRate": "Moyen",
+            "playerType": "Rare",
+            "attributes": [
+                {
+                    "name": "fut.attribute.DIV",
+                    "value": 91,
+                    "chemistryBonus": [
+                        0
+                    ]
+                },
+                {
+                    "name": "fut.attribute.HAN",
+                    "value": 90,
+                    "chemistryBonus": [
+                        0
+                    ]
+                },
+                {
+                    "name": "fut.attribute.KIC",
+                    "value": 95,
+                    "chemistryBonus": [
+                        0
+                    ]
+                },
+                {
+                    "name": "fut.attribute.REF",
+                    "value": 89,
+                    "chemistryBonus": [
+                        0
+                    ]
+                },
+                {
+                    "name": "fut.attribute.SPD",
+                    "value": 58,
+                    "chemistryBonus": [
+                        0
+                    ]
+                },
+                {
+                    "name": "fut.attribute.POS",
+                    "value": 91,
+                    "chemistryBonus": [
+                        0
+                    ]
+                }
+            ],
+            "name": "Neuer",
+            "quality": "gold",
+            "color": "rare_gold",
+            "isGK": true,
+            "positionFull": "Gardien",
+            "isSpecialType": false,
+            "contracts": null,
+            "fitness": null,
+            "rawAttributeChemistryBonus": null,
+            "isLoan": null,
+            "squadPosition": null,
+            "iconAttributes": null,
+            "itemType": "player",
+            "discardValue": null,
+            "id": "167495",
+            "modelName": "FUTPlayerItem",
+            "baseId": 167495,
+            "rating": 92
         }
     ]
 }

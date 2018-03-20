@@ -11,7 +11,7 @@
                                     <div class="thin">Name</div>
                                     <div class="bold">
                                         <slot name="commonName">
-                                            Player commonName
+                                            {{ player.commonName || player.firstName +' '+ player.lastName }}
                                         </slot>
                                     </div>
                                 </div>
@@ -22,7 +22,7 @@
                                     <div class="thin">Club</div>
                                     <div class="bold">
                                         <slot name="club">
-                                            Player Club
+                                           {{ player.club.name }}
                                         </slot>
                                     </div>
                                 </div>
@@ -33,7 +33,7 @@
                                     <div class="thin">Ovr</div>
                                     <div class="bold">
                                         <slot name="ovr">
-                                            00
+                                            {{player.rating}}
                                         </slot>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                                     <div class="thin">Pos</div>
                                     <div class="bold red">
                                         <slot name="pos">
-                                            CDM
+                                            <fc5playerposition :position="player.position"></fc5playerposition>
                                         </slot>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                                     <div class="thin">Age</div>
                                     <div class="bold">
                                         <slot name="age">
-                                            00
+                                            {{player.age}}
                                         </slot>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                                     <div class="thin">Hei</div>
                                     <div class="bold">
                                         <slot name="height">
-                                            000
+                                            {{player.height}}
                                         </slot>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@
                                     <div class="thin">Wei</div>
                                     <div class="bold">
                                         <slot name="weight">
-                                            00
+                                            {{player.weight}}
                                         </slot>
                                     </div>
                                 </div>
@@ -100,12 +100,12 @@
                         </div>
                     </div>
 
-                    <div class="flexrow ">
+                    <div class="flexrow line ">
                         <div class="flexcol box">
                             <div class="thin">ATQ</div>
                             <div class="bold red">
                                 <slot name="atq">
-                                    00
+                                    {{ Math.round((player.finishing + player.shotpower + player.longshots + player.volleys + player.penalties + player.dribbling + player.curve + player.crossing + player.ballcontrol) / 9) }}
                                 </slot>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                             <div class="thin">Sho</div>
                             <div class="bold">
                                 <slot name="shotpower">
-                                    00
+                                    {{player.shotpower}}
                                 </slot>
                             </div>
                         </div>
@@ -121,7 +121,7 @@
                             <div class="thin">Fin</div>
                             <div class="bold ">
                                 <slot name="finishing">
-                                    00
+                                    {{player.finishing}}
                                 </slot>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                             <div class="thin">Lon</div>
                             <div class="bold ">
                                 <slot name="longshot">
-                                    00
+                                    {{player.longshots}}
                                 </slot>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                             <div class="thin">Dri</div>
                             <div class="bold ">
                                 <slot name="dribbling">
-                                    00
+                                    {{player.dribbling}}
                                 </slot>
                             </div>
                         </div>
@@ -145,7 +145,7 @@
                             <div class="thin">Con</div>
                             <div class="bold ">
                                 <slot name="ballcontrol">
-                                    00
+                                    {{player.ballcontrol}}
                                 </slot>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                             <div class="thin">Cro</div>
                             <div class="bold ">
                                 <slot name="crossing">
-                                    00
+                                    {{player.crossing}}
                                 </slot>
                             </div>
                         </div>
@@ -161,41 +161,41 @@
                             <div class="thin">Cur</div>
                             <div class="bold ">
                                 <slot name="curve">
-                                    00
+                                    {{player.curve}}
                                 </slot>
                             </div>
                         </div>
                         <div class="flexcol box">
-                            <div class="thin">Lon</div>
+                            <div class="thin">Vol</div>
                             <div class="bold ">
-                                <slot name="longshot">
-                                    00
+                                <slot name="volleys">
+                                    {{player.volleys}}
                                 </slot>
                             </div>
                         </div>
                         <div class="flexcol box">
                             <div class="thin">Pen</div>
                             <div class="bold ">
-                                <slot name="penalty">
-                                    00
+                                <slot name="penalties">
+                                    {{player.penalties}}
                                 </slot>
                             </div>
                         </div>
                     </div>
-                    <div class="flexrow ">
+                    <div class="flexrow line">
                         <div class="flexcol box">
                             <div class="thin">DEF</div>
                             <div class="bold green">
                                 <slot name="def">
-                                    00
+                                    {{ Math.round((player.headingaccuracy + player.interceptions + player.jumping + player.marking + player.reactions + player.slidingtackle + player.standingtackle + player.strength + player.stamina) / 9) }}
                                 </slot>
                             </div>
                         </div>
                         <div class="flexcol box">
                             <div class="thin">Int</div>
                             <div class="bold">
-                                <slot name="interception">
-                                    00
+                                <slot name="interceptions">
+                                    {{player.interceptions}}
                                 </slot>
                             </div>
                         </div>
@@ -203,7 +203,7 @@
                             <div class="thin">Hea</div>
                             <div class="bold ">
                                 <slot name="headingaccuracy">
-                                    00
+                                    {{player.headingaccuracy}}
                                 </slot>
                             </div>
                         </div>
@@ -211,7 +211,7 @@
                             <div class="thin">Jum</div>
                             <div class="bold ">
                                 <slot name="jumping">
-                                    00
+                                    {{player.jumping}}
                                 </slot>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                             <div class="thin">Mar</div>
                             <div class="bold ">
                                 <slot name="marking">
-                                    00
+                                    {{player.marking}}
                                 </slot>
                             </div>
                         </div>
@@ -227,7 +227,7 @@
                             <div class="thin">Rea</div>
                             <div class="bold ">
                                 <slot name="reactions">
-                                    00
+                                    {{player.reactions}}
                                 </slot>
                             </div>
                         </div>
@@ -235,7 +235,7 @@
                             <div class="thin">Sli</div>
                             <div class="bold ">
                                 <slot name="slidingtackle">
-                                    00
+                                    {{player.slidingtackle}}
                                 </slot>
                             </div>
                         </div>
@@ -243,7 +243,7 @@
                             <div class="thin">Tac</div>
                             <div class="bold ">
                                 <slot name="standingtackle">
-                                    00
+                                    {{player.standingtackle}}
                                 </slot>
                             </div>
                         </div>
@@ -251,7 +251,7 @@
                             <div class="thin">Str</div>
                             <div class="bold ">
                                 <slot name="strength">
-                                    00
+                                    {{player.strength}}
                                 </slot>
                             </div>
                         </div>
@@ -259,17 +259,17 @@
                             <div class="thin">Sta</div>
                             <div class="bold ">
                                 <slot name="stamina">
-                                    00
+                                    {{player.stamina}}
                                 </slot>
                             </div>
                         </div>
                     </div>
-                    <div class="flexrow ">
+                    <div class="flexrow line">
                         <div class="flexcol box">
                             <div class="thin">SPE</div>
                             <div class="bold blue">
                                 <slot name="spe">
-                                    00
+                                    {{ Math.round((player.acceleration + player.aggression + player.agility + player.balance + player.freekickaccuracy + player.shortpassing + player.sprintspeed + player.longpassing + player.positioning + player.vision) / 10) }}
                                 </slot>
                             </div>
                         </div>
@@ -277,7 +277,7 @@
                             <div class="thin">Acc</div>
                             <div class="bold">
                                 <slot name="acceleration">
-                                    00
+                                    {{player.acceleration}}
                                 </slot>
                             </div>
                         </div>
@@ -285,7 +285,7 @@
                             <div class="thin">Spr</div>
                             <div class="bold ">
                                 <slot name="sprintspeed">
-                                    00
+                                    {{player.sprintspeed}}
                                 </slot>
                             </div>
                         </div>
@@ -293,7 +293,7 @@
                             <div class="thin">Agi</div>
                             <div class="bold ">
                                 <slot name="agility">
-                                    00
+                                    {{player.balance}}
                                 </slot>
                             </div>
                         </div>
@@ -301,7 +301,7 @@
                             <div class="thin">Agr</div>
                             <div class="bold ">
                                 <slot name="aggression">
-                                    00
+                                    {{player.aggression}}
                                 </slot>
                             </div>
                         </div>
@@ -309,7 +309,7 @@
                             <div class="thin">Bal</div>
                             <div class="bold ">
                                 <slot name="balance">
-                                    00
+                                    {{player.balance}}
                                 </slot>
                             </div>
                         </div>
@@ -317,7 +317,7 @@
                             <div class="thin">Vis</div>
                             <div class="bold ">
                                 <slot name="vision">
-                                    00
+                                    {{player.vision}}
                                 </slot>
                             </div>
                         </div>
@@ -325,41 +325,41 @@
                             <div class="thin">Fki</div>
                             <div class="bold ">
                                 <slot name="freekick">
-                                    00
+                                    {{player.freekickaccuracy}}
                                 </slot>
                             </div>
                         </div>
                         <div class="flexcol box">
                             <div class="thin">Pos</div>
                             <div class="bold ">
-                                <slot name="positionning">
-                                    00
+                                <slot name="positioning">
+                                    {{player.positioning}}
                                 </slot>
                             </div>
                         </div>
                         <div class="flexcol box">
                             <div class="thin">Sho</div>
                             <div class="bold ">
-                                <slot name="shotpass">
-                                    00
+                                <slot name="shortpassing">
+                                    {{player.shortpassing}}
                                 </slot>
                             </div>
                         </div>
                         <div class="flexcol box">
                             <div class="thin">Lon</div>
                             <div class="bold ">
-                                <slot name="longpass">
-                                    00
+                                <slot name="longpassing">
+                                    {{player.longpassing}}
                                 </slot>
                             </div>
                         </div>
                     </div>
-                    <div class="flexrow ">
+                    <div class="flexrow line">
                         <div class="flexcol box">
                             <div class="thin">GK &nbsp;</div>
                             <div class="bold yellow">
                                 <slot name="gk">
-                                    00
+                                    {{ Math.round((player.gkhandling + player.gkkicking + player.gkdiving + player.gkpositioning + player.gkreflexes) / 5)}}
                                 </slot>
                             </div>
                         </div>
@@ -367,7 +367,7 @@
                             <div class="thin">Div</div>
                             <div class="bold">
                                 <slot name="gkdiving">
-                                    00
+                                    {{player.gkdiving}}
                                 </slot>
                             </div>
                         </div>
@@ -375,7 +375,7 @@
                             <div class="thin">Han</div>
                             <div class="bold ">
                                 <slot name="handling">
-                                    00
+                                    {{player.gkhandling}}
                                 </slot>
                             </div>
                         </div>
@@ -383,15 +383,15 @@
                             <div class="thin">Kick</div>
                             <div class="bold ">
                                 <slot name="kicking">
-                                    00
+                                    {{player.gkkicking}}
                                 </slot>
                             </div>
                         </div>
                         <div class="flexcol box">
                             <div class="thin">Pos</div>
                             <div class="bold ">
-                                <slot name="positionning">
-                                    00
+                                <slot name="gkpositioning">
+                                    {{player.gkpositioning}}
                                 </slot>
                             </div>
                         </div>
@@ -399,16 +399,22 @@
                             <div class="thin">Ref</div>
                             <div class="bold ">
                                 <slot name="reflexes">
-                                    00
+                                    {{player.gkreflexes}}
                                 </slot>
                             </div>
                         </div>
                     </div>
 
-                    <slot name="svgGraph"/>
+                    <div v-if="graphIsShown">
+                        <slot name="svgGraph">
+                            <svg width="200" height="200">
+                                <fc5svggraph :stats="stats"/>
+                            </svg>
+                        </slot>
+                    </div>
 
 
-                    <div class="modal-footer">
+                    <div class="modal-footer" @click="openContract" >
                         <slot name="footer">
                             Offer contract
                             <button class="modal-default-button" @click="$emit('close')">
@@ -423,15 +429,45 @@
 </template>
 
 <script>
+
     import fc5svggraph from './fc5SvgGraph'
+    import fc5playerposition from './fc5PlayerPosition'
 
     export default {
         name: "fc5modalplayer",
-        components: {fc5svggraph},
+        components: {fc5svggraph, fc5playerposition},
         props: ['player'],
         data(){
-            return{
+          return{
+              graphIsShown: true
+          }
+        },
+        computed: {
+            stats: function () {
+                let gkStats = [
+                    { label: 'Diving', value: this.player.gkdiving },
+                    { label: 'Handling', value: this.player.gkhandling },
+                    { label: 'Kicking', value: this.player.gkkicking },
+                    { label: 'Positionning', value: this.player.gkpositioning },
+                    { label: 'Reflexes', value: this.player.gkreflexes },
+                ]
+                let playerStats = [
+                    { label: 'Shoot', value: (this.player.finishing + this.player.shotpower + this.player.longshots + this.player.volleys) / 4 },
+                    { label: 'Speed', value: (this.player.sprintspeed + this.player.acceleration) / 2 },
+                    { label: 'Dribble', value: (this.player.dribbling + this.player.ballcontrol + this.player.agility ) / 3 },
+                    { label: 'Passing', value: (this.player.shortpassing + this.player.longpassing + this.player.crossing) / 3 },
+                    { label: 'Defense', value: (this.player.interceptions + this.player.marking + this.player.slidingtackle + this.player.standingtackle ) / 4 },
+                    { label: 'Physicality', value: (this.player.stamina + this.player.strength + this.player.jumping) /3 },
+                ]
 
+                if(this.player.isGK === true ) return gkStats;
+
+                return playerStats;
+            }
+        },
+        methods:{
+            openContract(){
+                console.log("hide graph and show contract proposition")
             }
         }
     }
@@ -465,9 +501,11 @@
         padding: 10px 5px 10px 5px;
 
         .left{
+            flex-grow: 1;
+        }
+        .right{
             flex-grow: 2;
         }
-
         .modal-header h3 {
             margin-top: 0;
             color: #595555;
@@ -477,12 +515,15 @@
             margin: 20px 0;
         }
 
+        .line{
+            justify-content: space-evenly;
+            padding: 5px 0px 5px 0px;
+        }
         .flag{
             max-height: 24px;
         }
 
         .modal-default-button {
-            background-color: red;
             float: right;
         }
     }
