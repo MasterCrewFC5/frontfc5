@@ -9,7 +9,7 @@
                     <label>Manage your team</label>
                 </div>
                 <div class="icon">
-                    <img src="./../../assets/homepage/manage.svg" alt="manger your team" onclick="location.href='/manage'">
+                    <img src="./../../assets/homepage/manage.svg" alt="manage your team" onclick="location.href='/manage'">
                 </div>
             </div>
             <div class="store">
@@ -17,7 +17,7 @@
                     <label>Store</label>
                 </div>
                 <div class="icon">
-                    <img src="./../../assets/homepage/store.svg" alt="manger your team" onclick="location.href='/store'">
+                    <img src="./../../assets/homepage/store.svg" alt="Store" onclick="location.href='/store'">
                 </div>
             </div>
             <div class="searchplayer">
@@ -25,7 +25,7 @@
                     <label>Search player</label>
                 </div>
                 <div class="icon">
-                    <img src="./../../assets/homepage/searchplayer.svg" alt="manger your team" onclick="location.href='/search'">
+                    <img src="./../../assets/homepage/searchplayer.svg" alt="Search player" onclick="location.href='/search'">
                 </div>
             </div>
             <div class="findgame">
@@ -33,7 +33,7 @@
                     <label>Find game</label>
                 </div>
                 <div class="icon">
-                    <img src="./../../assets/homepage/findgame.svg" alt="manger your team" onclick="location.href='/findgame'">
+                    <img src="./../../assets/homepage/findgame.svg" alt="find game" onclick="location.href='/findgame'">
                 </div>
             </div>
         </div>
@@ -44,7 +44,6 @@
     import axios from 'axios'
     import store from './../FootballStore'
     import fc5topbar from './../fc5Topbar.vue'
-    import Vuex from 'vuex'
 
     export default {
         store: store,
@@ -66,18 +65,19 @@
         background: url("../../assets/HomeBackground.png")  no-repeat center center fixed;
         background-size: cover;
     }
+    .pub{
+        position: absolute;
+        top: 8%;
+        left: 0%;
+        display: block;
+        height: 8%;
+        width: 100%;
+        background: grey;
+    }
+
     .home{
         height: 100%;
 
-        .pub{
-            position: absolute;
-            top: 8%;
-            left: 0%;
-            display: block;
-            height: 8%;
-            width: 100%;
-            background: grey;
-        }
         .content{
             margin-top: -15%;
             height:100%;
@@ -87,34 +87,37 @@
             justify-content: center;*/
 
             /*border: 1px solid black;*/
-            .texte{
-                color: white;
-                font-size: 16px;
+            label{
+                font-family: Roboto;
+                font-style: normal;
                 font-weight: bold;
+                font-size: 16px;
+                color:white;
+                letter-spacing: -0.06em;
             }
             .manage{
-                /*<!--transform: translate(0%,-50%);-->*/
-                .icon{
-
-                }
+                top: 16%;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
             }
-            .shop{
-                /*<!--transform: translate(-50%,0%);-->*/
-                .icon{
-
-                }
+            .store{
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                position: absolute;
             }
             .searchplayer{
-                /*transform: translate(50%,0%);*/
-                .icon{
-
-                }
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
             }
             .findgame{
-                /*transform: translate(0%,50%);*/
-                .icon{
-
-                }
+                position: absolute;
+                bottom: 15%;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }

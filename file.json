@@ -1,0 +1,109 @@
+"jsonPlayer" : [
+{
+    "commonName": "",
+    "ATQ":{
+        "ballcontrol": 92,.
+        "crossing": 80,.
+        "curve": 82,.
+        "dribbling": 93,.
+        "finishing": 83,.
+        "volleys": 79,.
+        "shotpower": 79,.
+        "longshots": 82,.
+        "penalties": 86,.
+    },
+    "DEF":{
+        "headingaccuracy": 57,
+        "interceptions": 41,
+        "jumping": 59,
+        "marking": 25,
+        "reactions": 85,
+        "slidingtackle": 22,
+        "standingtackle": 27,
+        "strength": 65,
+        "stamina": 79
+    },
+    "SPE":{
+        "acceleration": 93,
+        "aggression": 54,
+        "agility": 93,
+        "balance": 91,
+        "freekickaccuracy": 79,
+        "shortpassing": 86,
+        "sprintspeed": 87,
+        "longpassing": 81,
+        "positioning": 85,
+        "vision": 86
+    },
+    "GK":{
+        "gkdiving": 11,
+        "gkhandling": 12,
+        "gkkicking": 6,
+        "gkpositioning": 8,
+        "gkreflexes": 8
+    },
+    "firstName": "Eden",
+    "lastName": "Hazard",
+    "nation": {
+        "imageUrls": {
+            "small": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/24x14/7.png",
+            "medium": "https://fifa17.content.easports.com/fifa/fltOnlineAssets/B1BA185F-AD7C-4128-8A64-746DE4EC5A82/2018/fut/items/images/flags/html5/30x19/7.png"
+        },
+        "abbrName": "Belgium",
+        "name": "Belgium"
+    },
+    "club": {
+        "abbrName": "Chelsea",
+        "id": 5,
+        "name": "Chelsea"
+    },
+    "position": "LW",
+    "composure": 87,
+    "height": 173,
+    "weight": 76,
+    "birthdate": "1991-01-07",
+    "age": 27,
+    "foot": "Right",
+    "potential": 91,
+    "weakFoot": 4,
+    "name": "Hazard",
+    "isGK": false,
+    "positionFull": "Left Wing",
+    "isSpecialType": false,
+    "contracts": null,
+    "fitness": null,
+    "isLoan": null,
+    "itemType": "player",
+    "id": "183277",
+    "baseId": 183277,
+    "rating": 90
+},
+{
+    "commonName": "",
+    "ATQ" : "84",
+    "DEF": "51",
+    "SPE": "84",
+    "GK": "9",
+    "firstName": "Eden",
+    "lastName": "Hazard",
+    "nationName": "Belgium",
+    "club": "Chelsea",
+    "position": "LW",
+    "height": 173,
+    "weight": 76,
+    "birthdate": "1991-01-07",
+    "age": 27,
+    "foot": "Right",
+    "potential": 91,
+    "isGK": false,
+    "positionFull": "Left Wing",
+    "contracts": null,
+    "value": 300000,
+    "id": "183277",
+    "baseId": 183277,
+    "rating": 90
+}
+
+]
+
+

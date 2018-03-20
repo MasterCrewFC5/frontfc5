@@ -16,3 +16,8 @@ new Vue({
     template: '<App/>',
     components: { App }
 })
+
+function getMoneyValue ( x ) {
+    return (7.563*(x*x))-165160;
+}
+

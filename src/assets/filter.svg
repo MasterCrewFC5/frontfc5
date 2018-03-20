@@ -1,0 +1,38 @@
+<svg width="38" height="38" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Filter button</title>
+    <desc>Created using Figma</desc>
+    <g id="Canvas" transform="translate(-123 250)">
+        <g id="Filter button">
+            <g id="Rectangle 2.1">
+                <use xlink:href="#path0_fill" transform="translate(123 -250)" fill="#F5F2F2"/>
+            </g>
+            <g id="filter">
+                <g id="Group">
+                    <g id="Group">
+                        <g id="Vector" filter="url(#filter0_dd)">
+                            <use xlink:href="#path1_fill" transform="translate(126 -245)" fill="#5DB55B"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_dd" filterUnits="userSpaceOnUse" x="124" y="-245" width="36" height="33" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+            <feOffset dx="0" dy="2"/>
+            <feGaussianBlur stdDeviation="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+            <feOffset dx="0" dy="2"/>
+            <feGaussianBlur stdDeviation="1"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
+            <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+        </filter>
+        <path id="path0_fill" d="M 0 0L 38 0L 38 37L 0 37L 0 0Z"/>
+        <path id="path1_fill" d="M 0 4.86374e-08L 0 4.46837L 12.549 17.0174L 12.549 26.5859L 19.451 28.3114L 19.451 17.0173L 32 4.46831L 32 4.86374e-08L 0 4.86374e-08Z"/>
+    </defs>
+</svg>
