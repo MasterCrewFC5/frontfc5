@@ -4314,6 +4314,72 @@
             "baseId": 167495,
             "rating": 92
         }
+    ],
+    "storeItems": [
+        {
+            "id": 1,
+            "title":"Premium mode",
+            "value": 2.99,
+            "fc5buyable": false,
+            "description": "Delete all commercials from the app for ever",
+            "image": "fc5logo.png"
+        },
+        {
+            "id": 2,
+            "title":"Buy 1 referee",
+            "value": 100,
+            "fc5buyable": true,
+            "description": "The referee is 30% more likely to signal a foul for your side",
+            "image": "./../../assets/store/coin1.svg"
+        },
+        {
+            "id": 3,
+            "title":"Buy 10 referee",
+            "value": 1000,
+            "fc5buyable": true,
+            "description": "Gives you 1 free referee. so smooth",
+            "image": "./../../assets/store/coin1.svg"
+        },
+        {
+            "id": 4,
+            "title":"Buy 100 referee",
+            "value": 10000,
+            "fc5buyable": true,
+            "description": "Gives you 10 free referees. gimme all the referees",
+            "image": "coin1.svg"
+        },
+        {
+            "id": 5,
+            "title":"Buy 300",
+            "value": 0.99,
+            "fc5buyable": false,
+            "description": "",
+            "image": "./../../assets/store/coin1.svg"
+        },
+        {
+            "id": 6,
+            "title":"Buy 1300",
+            "value": 3.99,
+            "fc5buyable": false,
+            "description": "",
+            "image": "./../../assets/store/coin1.svg"
+        },
+        {
+            "id": 7,
+            "title":"Ronaldo's Haircut",
+            "value": 100,
+            "fc5buyable": true,
+            "description": "All your player gets Ronaldo's haircut which gives you 10% more swagger score for the next 10 games",
+            "image": "./../../assets/store/coin1.svg"
+        },
+        {
+            "id": 8,
+            "title":"Messi's touch",
+            "value": 100,
+            "fc5buyable": true,
+            "description": "You team gain Messi's touch which gives it 10% dribbling skill upgrade for the next 10 games",
+            "image": "./../../assets/store/coin1.svg"
+        }
     ]
 }
 

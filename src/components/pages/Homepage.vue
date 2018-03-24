@@ -51,16 +51,16 @@
         components: {fc5topbar},
         data(){
             return {
-                user: {}
+                user: { }
             }
         }
     }
 </script>
 
 <style lang="scss">
-    html, body{
-        height: 100%;
-    }
+    /*html, body{*/
+        /*height: 100%;*/
+    /*}*/
     body{
         background: url("../../assets/HomeBackground.png")  no-repeat center center fixed;
         background-size: cover;

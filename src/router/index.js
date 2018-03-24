@@ -5,6 +5,7 @@ import Hello from "@/components/Hello";
 import Field from "@/components/Field";
 import Homepage from "@/components/pages/Homepage";
 import SearchPlayers from "@/components/pages/SearchPlayers";
+import Store from "@/components/pages/Store";
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
             path: '/search',
             name: 'SearchPlayers',
             component: SearchPlayers
+        },
+        {
+            path: '/store',
+            name: 'Store',
+            component: Store
         }
     ]
 })

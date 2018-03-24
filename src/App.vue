@@ -36,6 +36,10 @@
         height: 100% ;
     }
 
+    .pub{
+        width:100%;
+    }
+
     .thin{
         font-weight: 100;
     }
