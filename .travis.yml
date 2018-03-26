@@ -10,11 +10,14 @@ script:
 - node node_modules/jscodesniffer/jscs.js app.js --standard=Jquery --report-full
 - npm run dev &
 notifications:
-  email:
+  slack:
     on_failure: always
+    on_success: always
+  email:
+    on_failure: never
     on_success: never
 deploy:
   provider: heroku
-  app: gitworkflowesgi
+  app:
   api_key:
     secure: 9ef3e6d2-0d6a-4e01-8d5f-bc64204d3f52
