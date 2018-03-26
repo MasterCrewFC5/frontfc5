@@ -10,7 +10,7 @@ script:
 - node node_modules/jscodesniffer/jscs.js app.js --standard=Jquery --report-full
 - npm run dev &
 notifications:
-  slack:
+  slack: footballcontest5:CGgiZUQF1n4odxz0MUdFBORi
     on_failure: always
     on_success: always
   email:
