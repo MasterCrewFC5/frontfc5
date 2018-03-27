@@ -10,9 +10,8 @@ script:
 - node node_modules/jscodesniffer/jscs.js app.js --standard=Jquery --report-full
 - npm run dev &
 notifications:
-  slack: footballcontest5:CGgiZUQF1n4odxz0MUdFBORi
-    on_failure: always
-    on_success: always
+  slack:
+    secure: N8LO9TY9iSYqtDVFSvhQVaAKuF5kgVJmep0rFExbwcmo7sd21+5QEGru/JgphByowIkDoVQt1NggXsHjVjnAja/8ZPlGBH/8FlP1lOkWP24W3rCT8Sx5BeBwz8JR7nQFznHRHx1hl+FtbNfv7OV9l1a6Yxt4G8Ad875nJpwSECNnEtrdMZkT1mBqoQZpTCOAutH/blq5ZlSwr7DZ8IIQ7hMmy44w27PWftZ3drIeY+dPsJMfGnhLEitkyyg4mHSZXVJsjviPvPpL+ZNCrX/6C9evQ7mmcc6o/XTqPhx6o4ce5aVEgWx277ED2uF4dujXG4DDAw/fF/HKRyDQFRH52pkS1R87YYqghg55AB3nFtz9YrEgBbuNffxk8w3OZ4baDzcT6XPZr8Xh5legdCn5FakJKO52pHTkebYsiJxn/bLy+o5Zj759Q7xDlgbOFa63fNaAFhW+PjEYKcy+KQXoZKLl0zGKdqz4h2I025v18Gg/gPla92i1uFKxk6fqScA7WagH11Jhl5/uQFxmzjv9Z9KmdYj0+4OnC1iDYmxnzufprjtshK8GqwoMbq+vzUrlOGd4kF6AZ2hb1iGQ2QeJfGnRIFzvuxg633Pw012m3b39qMBanWRibbTgcfzYxaLiQV51nl0dyBUrbAdRJ5VCYfDCV1euvylVVZVtE8uPb7M=
   email:
     on_failure: never
     on_success: never
